@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 - Upside Down</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            color: #ff0000;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+        }
+        h1 {
+            font-size: 2rem;
+            text-shadow: 0 0 10px red;
+            animation: glitch 1s infinite alternate;
+        }
+        @keyframes glitch {
+            0% { transform: translateX(-2px); text-shadow: -3px 0px 10px red; }
+            100% { transform: translateX(2px); text-shadow: 3px 0px 10px red; }
+        }
+        p {
+            margin: 10px 0;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>403 - Upside Down</h1>
+    <p>你似乎闖入了Upside Down... 🕷️</p>
+    <p>這裡不是你該來的地方，回頭吧，趁還來得及。</p>
+    <div class="buttons">
+        <button onclick="window.location.href='/'">返回首頁</button>
+        <button onclick="location.reload()">重新載入</button>
+    </div>
+</div>
+</body>
+</html>
